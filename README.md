@@ -52,13 +52,13 @@ To use the OMDb API, you need to create a `.env` file in the root directory of t
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/MovieMap.git
+   git clone https://github.com/yourusername/Movie-Map.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd MovieMap
+   cd Movie-Map
    ```
 
 3. Install the required dependencies:
