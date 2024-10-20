@@ -1,70 +1,137 @@
-# Getting Started with Create React App
+# Movie-Map
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Movie-Map is a React-based app that allows you to discover, track, and manage your favorite movies. It provides an intuitive interface for searching movies and keeping a record of those you have watched, along with ratings and summaries.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Search for Movies**: Use the search bar to find movies by title.
+- **Results Display**: View the number of results found (e.g., "Found 8 results").
+- **Movie List (Left Box)**: Browse movies returned from the OMDb API based on your search query.
+- **Watched Movies Summary (Right Box)**: Track the movies you've watched, including:
+  - Total number of movies watched.
+  - Average IMDb rating.
+  - Average user rating.
+  - Average runtime.
+- **Detailed Movie View (Right Box)**: Select a movie from the Movie List to view additional details:
+  - Plot, director, actors, release date.
+  - Rate the movie out of 10 stars.
+  - Add movie to Watched List after you have rated it.
+  - View the ratings you gave a movie if it is already present in the watched list
+- **Manage Watched List**: Remove movies using the "red cross" next to watched movies on the list
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Follow these steps to get the project running on your local machine.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+Make sure you have the following installed:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Node.js**: [Download and install Node.js](https://nodejs.org/)
+- **npm** (Node Package Manager) or **yarn**: npm comes with Node.js, but you can also install [yarn](https://yarnpkg.com/getting-started/install) if preferred.
 
-### `npm run build`
+#### Creating the .env File
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To use the OMDB API, you need to create a `.env` file in the root directory of the project:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. In the root directory, create a file named `.env`.
+2. Add your OMDB API key as follows:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```plaintext
+   REACT_APP_API_KEY=your_api_key_here
+   ```
 
-### `npm run eject`
+#### Getting an OMdB API Key
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Visit the [OMDB API website]([http://www.omdbapi.com/apikey.aspx](https://www.omdbapi.com/apikey.aspx?__EVENTTARGET=freeAcct&__EVENTARGUMENT=&__LASTFOCUS=&__VIEWSTATE=%2FwEPDwUKLTIwNDY4MTIzNQ9kFgYCAQ9kFgICBw8WAh4HVmlzaWJsZWhkAgIPFgIfAGhkAgMPFgIfAGhkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYDBQtwYXRyZW9uQWNjdAUIZnJlZUFjY3QFCGZyZWVBY2N0oCxKYG7xaZwy2ktIrVmWGdWzxj%2FDhHQaAqqFYTiRTDE%3D&__VIEWSTATEGENERATOR=5E550F58&__EVENTVALIDATION=%2FwEdAAU%2BO86JjTqdg0yhuGR2tBukmSzhXfnlWWVdWIamVouVTzfZJuQDpLVS6HZFWq5fYpioiDjxFjSdCQfbG0SWduXFd8BcWGH1ot0k0SO7CfuulHLL4j%2B3qCcW3ReXhfb4KKsSs3zlQ%2B48KY6Qzm7wzZbR&at=freeAcct&Email=)).
+2. Create a free API key.
+3. Paste it into the `.env` file you created earlier.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone the repository:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   git clone https://github.com/yourusername/MovieMap.git
+   ```
 
-## Learn More
+2. Navigate to the project directory:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   cd MovieMap
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Install the required dependencies:
 
-### Code Splitting
+   Using npm:
+   ```bash
+   npm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   Or using yarn:
+   ```bash
+   yarn install
+   ```
 
-### Analyzing the Bundle Size
+### Running the Project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+To run the project locally:
 
-### Making a Progressive Web App
+1. Start the development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   Using npm:
+   ```bash
+   npm start
+   ```
 
-### Advanced Configuration
+   Or using yarn:
+   ```bash
+   yarn start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+2. Open your browser and navigate to `http://localhost:3000` to view the app.
 
-### Deployment
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. **Search for a Movie**: Enter the name of a movie in the search bar.
+2. **View Results**: Check the results count and browse through the list of movies displayed.
+3. **Select a Movie**: Click on a movie to view detailed information including plot, director, and cast.
+4. **Rate a Movie**: If you’ve watched the movie, you can rate it out of 10 stars and add it to your watched list.
+5. **Manage Watched Movies**: View your watched movies summary, including average ratings (IMDb and personal), average runtime, and total counts, and remove any movies you no longer wish to track from the Watched List using the red cross.
 
-### `npm run build` fails to minify
+## Example
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- You search for "Inception," and the app displays a list of movies related to your query.
+- Upon selecting "Inception," you can read its plot, see who directed it, and rate it out of 10 stars. Once you rate it, the button to add it to your watched list will be displayed.
+- Your watched movies summary will update, reflecting the new average IMDb rating, user rating and run-time.
+- On selecting "Inception again from the list of movies (left box) you can view the rating you gave it.
+- On the list of watched movie (right box) there is a "red cross" next to each movie using which you can remove it from the list of watched movies
+
+## Technologies Used
+
+- **React**: A JavaScript library for building user interfaces.
+- **CSS**: For styling the app.
+- **OMDb API**: For movie data retrieval.
+
+## Screenshots
+
+Here are some screenshots of the app in action:
+
+<img width="1512" alt="Screenshot 2024-10-20 at 7 37 12 PM" src="https://github.com/user-attachments/assets/122e7799-d7ca-403d-a99a-6387268c2f6f">
+<img width="1512" alt="Screenshot 2024-10-20 at 7 37 47 PM" src="https://github.com/user-attachments/assets/4fdf4385-a278-44e9-b3c1-a712a694d288">
+<img width="1512" alt="Screenshot 2024-10-20 at 7 38 47 PM" src="https://github.com/user-attachments/assets/f0cb9a1b-3539-4fdd-9e95-f19a63777e80">
+<img width="1512" alt="Screenshot 2024-10-20 at 7 39 22 PM" src="https://github.com/user-attachments/assets/1db39185-7546-4a8c-8435-ff5db768bbd2">
+<img width="1512" alt="Screenshot 2024-10-20 at 7 39 47 PM" src="https://github.com/user-attachments/assets/63010d48-f4f9-4a1d-8ea5-598657c567a2">
+<img width="1512" alt="Screenshot 2024-10-20 at 7 40 30 PM" src="https://github.com/user-attachments/assets/c4f16ae8-ebda-49da-906c-ec1ab8d21fd2">
+<img width="1512" alt="Screenshot 2024-10-20 at 7 40 55 PM" src="https://github.com/user-attachments/assets/efcce943-fb27-4768-a97c-f36efd6da906">
+<img width="1512" alt="Screenshot 2024-10-20 at 7 41 02 PM" src="https://github.com/user-attachments/assets/4a04d502-1f64-419c-bfe6-61579dfce758">
+<img width="1512" alt="Screenshot 2024-10-20 at 7 43 00 PM" src="https://github.com/user-attachments/assets/2fa7b0c2-5b53-4072-a6ae-efaed60cbf54">
+<img width="1512" alt="Screenshot 2024-10-20 at 7 43 12 PM" src="https://github.com/user-attachments/assets/4b543c7d-453e-4308-9acc-c1f6c8a1084b">
+
+## Author
+
+- **Aditya Jaiswal** - [GitHub](https://github.com/aditya240)
+
+---
+
+Thank you for checking out MovieMap! If you have any questions or feedback, feel free to open an issue or reach out! Enjoy exploring your movie collection!
