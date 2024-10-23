@@ -128,9 +128,19 @@ Here are some screenshots of the app in action:
 <img width="1512" alt="Screenshot 2024-10-20 at 7 41 02 PM" src="https://github.com/user-attachments/assets/4a04d502-1f64-419c-bfe6-61579dfce758">
 <img width="1512" alt="Screenshot 2024-10-20 at 7 43 00 PM" src="https://github.com/user-attachments/assets/2fa7b0c2-5b53-4072-a6ae-efaed60cbf54">
 
-**After Deletion of Star Trek Movie using the 'red cross'**
+**Watched List is synced with Local Storage**
+
+<img width="1512" alt="Screenshot 2024-10-23 at 4 29 01 PM" src="https://github.com/user-attachments/assets/6f5e679a-6039-4e78-a183-7b0cbef3dfd6">
+
+**After Deletion of Star Trek Movie using the 'red cross' (deletion is also synced with Local Storage)**
 
 <img width="1512" alt="Screenshot 2024-10-20 at 7 43 12 PM" src="https://github.com/user-attachments/assets/4b543c7d-453e-4308-9acc-c1f6c8a1084b">
+<img width="1512" alt="Screenshot 2024-10-23 at 4 29 13 PM" src="https://github.com/user-attachments/assets/39206a24-10f8-4b70-8899-5a15c6289cfb">
+
+**After reloading page/restarting project**
+
+<img width="1512" alt="Screenshot 2024-10-23 at 4 30 06 PM" src="https://github.com/user-attachments/assets/0bc5ea3b-74d5-4037-ac5a-f3e96a99bec4">
+
 
 ## Author
 
