@@ -19,6 +19,21 @@ Movie-Map is a React-based app that allows you to discover, track, and manage yo
   - View the ratings you gave a movie if it is already present in the watched list
 - **Manage Watched List**: Remove movies using the "red cross" next to watched movies on the list
 
+### Search Bar Functionality
+
+- **Focus with Enter/Return Key**: Users can focus on the search bar by pressing the Enter or Return key on their keyboard (Windows/Mac).
+- **Automatic Focus Reset**: When movie details are displayed after a selection, on clicking the Enter/Return key the focus returns to the search bar, and the search query is automatically cleared, providing a seamless user experience.
+
+### Movie Details Display
+
+- **Close with Escape Key**: When viewing movie details, users can press the Escape key to close the details view. This action will also display the watched movie summary and revert back to the movie list on the left box.
+
+### Custom Hooks
+
+- **`useMovies.js`**: A custom hook used for fetching movie data from the API, streamlining the process of retrieving movie information.
+- **`useLocalStorageState.js`**: This hook manages the setting and retrieval of the watched movies list in local storage, ensuring persistence across sessions.
+- **`useKeyDown.js`**: A custom hook that handles keyboard events, enabling the functionality for focusing the search bar and implementing the Escape key behavior for closing movie details.
+
 ## Getting Started
 
 Follow these steps to get the project running on your local machine.
@@ -64,11 +79,13 @@ To use the OMDb API, you need to create a `.env` file in the root directory of t
 3. Install the required dependencies:
 
    Using npm:
+
    ```bash
    npm install
    ```
 
    Or using yarn:
+
    ```bash
    yarn install
    ```
@@ -80,11 +97,13 @@ To run the project locally:
 1. Start the development server:
 
    Using npm:
+
    ```bash
    npm start
    ```
 
    Or using yarn:
+
    ```bash
    yarn start
    ```
@@ -140,7 +159,6 @@ Here are some screenshots of the app in action:
 **After reloading page/restarting project**
 
 <img width="1512" alt="Screenshot 2024-10-23 at 4 30 06 PM" src="https://github.com/user-attachments/assets/0bc5ea3b-74d5-4037-ac5a-f3e96a99bec4">
-
 
 ## Author
 
