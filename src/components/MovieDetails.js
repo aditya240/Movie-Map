@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Loader from "./Loader";
 import StarRating from "./StarRating";
+import { useKeyDown } from "../useKeyDown";
 
 export default function MovieDetails({
   selectedId,
@@ -12,6 +13,12 @@ export default function MovieDetails({
   const [loading, setIsLoading] = useState(false);
   const [userRating, setUserRating] = useState("");
 
+  const countRef = useRef(0);
+
+  useEffect(() => {
+    if (userRating) countRef.current = countRef.current + 1;
+  }, [userRating]);
+
   function handleAdd() {
     const watchedMovie = {
       imdbID: selectedId,
@@ -21,6 +28,7 @@ export default function MovieDetails({
       poster,
       userRating,
       runtime: Number(runtime.split(" ").at(0)),
+      countRatingDecisions: countRef.current,
     };
 
     onAddWatched(watchedMovie);
@@ -46,19 +54,7 @@ export default function MovieDetails({
 
   const watchedAlready = moviesWatched?.filter(handleWatchedAlready);
 
-  useEffect(() => {
-    function callback(e) {
-      if (e.code === "Escape") {
-        children();
-      }
-    }
-
-    document.addEventListener("keydown", callback);
-
-    return function () {
-      document.removeEventListener("keydown", callback);
-    };
-  }, [children]);
+  useKeyDown("Escape", children);
 
   useEffect(() => {
     async function getMovieDetails() {
